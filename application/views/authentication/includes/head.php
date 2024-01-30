@@ -48,6 +48,13 @@
             -webkit-transform-origin: 0 0;
         }
     }
+	.page-bg{
+		background: rgb(139,162,80, 0.5);
+		background-image: url('http://localhost:90/crm/assets/images/bg.png'); 
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		min-height: 100vh;
+	}
     </style>
     <?php if (show_recaptcha()) { ?>
     <script src='https://www.google.com/recaptcha/api.js'></script>

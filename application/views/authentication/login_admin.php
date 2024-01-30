@@ -1,17 +1,10 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <?php $this->load->view('authentication/includes/head.php'); ?>
 
-<body class="tw-bg-neutral-100 login_admin">
+<body class="tw-bg-neutral-100 login_admin page-bg">
 
     <div class="tw-max-w-md tw-mx-auto tw-pt-24 authentication-form-wrapper tw-relative tw-z-20">
-        <div class="company-logo text-center">
-            <?php get_dark_company_logo(); ?>
-        </div>
-
-        <h1 class="tw-text-2xl tw-text-neutral-800 text-center tw-font-semibold tw-mb-5">
-            <?php echo _l('admin_auth_login_heading'); ?>
-        </h1>
-
+        
         <div class="tw-bg-white tw-mx-2 sm:tw-mx-6 tw-py-6 tw-px-6 sm:tw-px-8 tw-shadow tw-rounded-lg">
 
             <?php $this->load->view('authentication/includes/alerts'); ?>
@@ -21,6 +14,14 @@
             <?php echo validation_errors('<div class="alert alert-danger text-center">', '</div>'); ?>
 
             <?php hooks()->do_action('after_admin_login_form_start'); ?>
+
+            <div class="company-logo text-center">
+                <?php get_dark_company_logo(); ?>
+            </div>
+
+            <h1 class="tw-text-2xl tw-text-neutral-800 text-center tw-font-semibold tw-mb-5">
+                <?php echo _l('admin_auth_login_heading'); ?>
+            </h1>
 
             <div class="form-group">
                 <label for="email" class="control-label">
